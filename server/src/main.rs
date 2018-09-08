@@ -30,6 +30,7 @@ fn main() {
 
     rocket::custom(config)
         .mount("/", routes![index])
+        .mount("/index.html", StaticFiles::from("./static/index.html"))
         .mount("/favicon.ico", StaticFiles::from("./static/favicon.ico"))
         .mount("/static", StaticFiles::from("./static/static"))
         .mount("/assets", StaticFiles::from("./assets"))
