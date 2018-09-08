@@ -50,6 +50,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   && rm -rf /var/lib/apt/lists/*
 COPY --from=rust_build /usr/src/server/target/debug/murphytech_server /usr/src
 COPY --from=node_build /usr/src/client/build /usr/src/static
+COPY ./assets /usr/src/assets
 
 # TODO: need to transfer the compiled client files over to the
 # built container as well.

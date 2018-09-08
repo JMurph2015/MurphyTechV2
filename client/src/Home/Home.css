@@ -1,0 +1,21 @@
+#content {
+    --gutter-size: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat( 3, minmax(5rem, 20rem));
+    grid-gap: var(--gutter-size);
+    padding: var(--gutter-size);
+    width: 100%;
+}
+
+#title {
+    padding: 0.5rem;
+    align-content: center;
+    text-align: center;
+}
+
+.card {
+}
+
+.media {
+    rotate: rotate(90deg);
+}
