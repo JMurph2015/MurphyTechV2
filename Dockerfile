@@ -56,4 +56,5 @@ COPY --from=node_build /usr/src/client/build /usr/src/static
 
 # Run the server
 ENV RUST_BACKTRACE=1
-CMD ["/usr/src/murphytech_server"]
+WORKDIR /usr/src
+CMD ["./murphytech_server"]
