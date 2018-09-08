@@ -27,8 +27,8 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: [
-      'Lato',
       'Roboto',
+      'Lato',
       'sans-serif'
     ].join(','),
   },

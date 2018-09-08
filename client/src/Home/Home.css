@@ -16,6 +16,14 @@
 .card {
 }
 
+.content {
+    align-content: center;
+    align-items: center;
+}
+
 .media {
-    rotate: rotate(90deg);
+    
+}
+
+.link-button {
 }
