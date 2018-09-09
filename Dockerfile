@@ -34,10 +34,12 @@ COPY ./server/src ./src
 RUN ["cargo", "build"]
 
 FROM node as node_build
-COPY ./client /usr/src/client
+COPY ./client/package.json /usr/src/client/
+COPY ./client/package-lock.json /usr/src/client/
 WORKDIR /usr/src/client
-RUN ["npm", "install", "-g", "create-react-app"]
 RUN ["npm", "install"]
+COPY ./client/public /usr/src/client/public
+COPY ./client/src /usr/src/client/src
 RUN ["npm", "run", "build"]
 
 # Transfer binary from build container to the runtime container

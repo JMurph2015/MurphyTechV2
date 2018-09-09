@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './NavBar.css';
-import { Typography, Menu } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import MenuItem from '@material-ui/core/MenuItem';
 import ToolBar from '@material-ui/core/Toolbar';
@@ -16,11 +16,6 @@ export function NavBar() {
                 <Link to="/" style={{ textDecoration: 'none' }}>
                     <MenuItem>
                         <Typography variant="subheading">Home</Typography>
-                    </MenuItem>
-                </Link>
-                <Link to="/about" style={{ textDecoration: 'none' }}>
-                    <MenuItem>
-                        <Typography variant="subheading">About</Typography>
                     </MenuItem>
                 </Link>
                 <Link to="/blog" style={{ textDecoration: 'none' }}>
