@@ -1,0 +1,2 @@
+sudo docker save jmurph2015/murphytech | bzip2 | pv | ssh murphytech.net 'bunzip2 | sudo docker load'
+ssh murphytech.net 'sudo docker stop webserver && sudo docker rm webserver && sudo docker run -d -p 80:80 --name webserver jmurph2015/murphytech'

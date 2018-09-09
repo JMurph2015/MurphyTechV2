@@ -1,29 +1,63 @@
-#content {
+.content {
     --gutter-size: 0.5rem;
     display: grid;
-    grid-template-columns: repeat( 3, minmax(5rem, 20rem));
+    grid-template-columns: repeat( auto-fit, minmax(5rem, 20rem));
     grid-gap: var(--gutter-size);
-    padding: var(--gutter-size);
+    align-items: top;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
     width: 100%;
 }
 
-#title {
-    padding: 0.5rem;
-    align-content: center;
+.title {
+    grid-column: 1 / -1;
     text-align: center;
+    align-content: center;
+    vertical-align: middle;
 }
 
-.card {
+.subtitle {
+    grid-column: 1 / -1;
+    text-align: left;
+    align-content: left;
+    vertical-align: middle;
 }
 
-.content {
+.headline {
+    display: flex;
+    flex-direction: row;
     align-content: center;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .media {
-    
+    max-width: 25rem;
 }
 
-.link-button {
+.grid-break {
+    grid-column: 1 / -1;
+}
+
+.button-content {
+    width: 100%;
+}
+
+.card-divider {
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.paragraph {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: calc(2 * var(--gutter-size));
+    align-items: top;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
 }

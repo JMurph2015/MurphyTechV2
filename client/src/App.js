@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { Route } from 'react-router-dom';
 import { NavBar } from './NavBar/NavBar';
 import { Home } from './Home/Home';
-import { About } from './About/About';
+//import { About } from './About/About';
 import { Blog } from './Blog/Blog';
 import { CssBaseline } from '@material-ui/core';
 
@@ -41,7 +40,6 @@ class App extends Component {
         <CssBaseline />
         <NavBar></NavBar>
         <Route path="/" exact component={Home}/>
-        <Route path="/about" exact component={About}/>
         <Route path="/blog" exact component={Blog}/>
       </MuiThemeProvider>
     );
