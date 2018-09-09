@@ -1,13 +1,16 @@
 .content {
     --gutter-size: 0.5rem;
+    --picture-size: 25rem;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(5rem, 20rem));
+    grid-auto-flow: row;
+    grid-template-columns: repeat( auto-fit, minmax(16rem, 25rem));
     grid-gap: var(--gutter-size);
     align-items: top;
     align-content: center;
     justify-items: center;
     justify-content: center;
-    width: 100%;
+    padding: var(--gutter-size);
 }
 
 .title {
@@ -34,7 +37,7 @@
 }
 
 .media {
-    max-width: 25rem;
+    max-width: var(--picture-size);
 }
 
 .grid-break {
@@ -51,13 +54,41 @@
     margin-bottom: 0.5rem;
 }
 
-.paragraph {
+.paragraph-mount {
     grid-column: 1 / -1;
+    /*width: calc(100vw - calc(2 * var(--gutter-size)));*/
+}
+
+.paragraph {
+    --portrait-size: 16rem;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat( auto-fit, minmax(var(--portrait-size), var(--portrait-size)));
     grid-gap: calc(2 * var(--gutter-size));
     align-items: top;
     align-content: center;
     justify-items: center;
     justify-content: center;
+}
+
+.selfie {
+    order: 1;
+    max-width: var(--portrait-size);
+    grid-column: 1 / span 1;
+}
+
+.bio {
+    order: 2;
+}
+
+@media (min-width: calc(calc(25rem * 2) + calc( 0.5rem * 3))) {
+    .bio {
+        grid-column: 2 / -1;
+    }
+}
+
+@media (max-width: calc(calc(25rem * 2) + calc( 0.5rem * 3))) {
+    .bio {
+        grid-column: 1 / -1;
+    }
 }
