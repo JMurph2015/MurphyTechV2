@@ -11,15 +11,21 @@ export function Home() {
 
     return (
         <div className="content">
-            <Typography className="title" variant="display2">Joseph P. Murphy</Typography>
-            <Typography className="subtitle" variant="display1" color="textPrimary">About Me</Typography>
+            <Typography className="title" variant="display2">
+                Joseph P. Murphy
+            </Typography>
+            <Typography className="subtitle" variant="display1" color="textPrimary">
+                About Me
+            </Typography>
+            <div className="paragraph-mount">
             <div className="paragraph">
                 <CardMedia
-                    className="media"
+                    className="selfie"
                     component="img"
                     title="That's me!"
                     image="/assets/me_in_portland_full.jpg" />
-                <Typography variant="body1">
+                <Typography variant="body1"
+                    className="bio">
                     Welcome to my website!  I'm Joseph Murphy, an engineering student at MIT.
                     I hail from the great state of Arkansas and a small town called Bentonville.
                     The last of five, my family is quite large and boisterous, so don't worry about
@@ -29,6 +35,7 @@ export function Home() {
                     I've seen a decent bit.  As for what I do these days, I spent the last two summers
                     interning at JPL and I'm early in my senior year at MIT for aerospace engineering.
                 </Typography>
+            </div>
             </div>
             <Typography className="subtitle" variant="display1" color="textPrimary">My Interests</Typography>
             <Card className="card">
