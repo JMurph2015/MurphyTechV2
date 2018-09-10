@@ -81,13 +81,15 @@
     order: 2;
 }
 
-@media (min-width: calc(calc(25rem * 2) + calc( 0.5rem * 3))) {
+/* 50.5 rem = 2 * var(--picture-size) + 3 * var(--gutter-size) */
+
+@media (min-width: 51.5rem) {
     .bio {
         grid-column: 2 / -1;
     }
 }
 
-@media (max-width: calc(calc(25rem * 2) + calc( 0.5rem * 3))) {
+@media (max-width: 51.5rem) {
     .bio {
         grid-column: 1 / -1;
     }
