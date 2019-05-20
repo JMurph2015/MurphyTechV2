@@ -1,30 +1,25 @@
-#![feature(plugin)]
-#![feature(decl_macro)]
-#![plugin(rocket_codegen)]
+#![feature(proc_macro_hygiene, decl_macro)]
 
+#[macro_use]
 extern crate rocket;
 extern crate rocket_contrib;
 
 use rocket::{
     config::{Config, Environment, LoggingLevel},
-    response::{
-        NamedFile,
-        status::{NotFound}
-    },
+    response::{status::NotFound, NamedFile},
 };
-use rocket_contrib::static_files::StaticFiles;
+use rocket_contrib::serve::StaticFiles;
 
 #[get("/")]
 fn index() -> Result<NamedFile, NotFound<String>> {
-    NamedFile::open("./static/index.html")
-        .map_err(|_| NotFound("Index Missing!".into()))
+    NamedFile::open("./static/index.html").map_err(|_| NotFound("Index Missing!".into()))
 }
 
 fn main() {
     let config = Config::build(Environment::Staging)
         .log_level(LoggingLevel::Normal)
         .address("0.0.0.0")
-        .port(80)
+        .port(8081)
         .finalize()
         .expect("Failed to build config");
 

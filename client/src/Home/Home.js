@@ -18,24 +18,24 @@ export function Home() {
                 About Me
             </Typography>
             <div className="paragraph-mount">
-            <div className="paragraph">
-                <CardMedia
-                    className="selfie"
-                    component="img"
-                    title="That's me!"
-                    image="/assets/me_in_portland_full.jpg" />
-                <Typography variant="body1"
-                    className="bio">
-                    Welcome to my website!  I'm Joseph Murphy, an engineering student at MIT.
-                    I hail from the great state of Arkansas and a small town called Bentonville.
-                    The last of five, my family is quite large and boisterous, so don't worry about
-                    interrupting me if I ramble, it's the only way I get a word in edgewise at home.
-                    Don't let my Midsouth/Midwest background fool you, I've been to all 48 states of
-                    the contiguous United States as well as Canada, Ireland, Italy, Belgium, and Spain; 
-                    I've seen a decent bit.  As for what I do these days, I spent the last two summers
-                    interning at JPL and I'm early in my senior year at MIT for aerospace engineering.
+                <div className="paragraph">
+                    <CardMedia
+                        className="selfie"
+                        component="img"
+                        title="That's me!"
+                        image="/assets/me_in_portland_full.jpg" />
+                    <Typography variant="body1"
+                        className="bio">
+                        Welcome to my website!  I'm Joseph Murphy, an engineering student at MIT.
+                        I hail from the great state of Arkansas and a small town called Bentonville.
+                        The last of five, my family is quite large and boisterous, so don't worry about
+                        interrupting me if I ramble, it's the only way I get a word in edgewise at home.
+                        Don't let my Midsouth/Midwest background fool you, I've been to all 48 states of
+                        the contiguous United States as well as Canada, Ireland, Italy, Belgium, and Spain;
+                        I've seen a decent bit.  As for what I do these days, I spent the last two summers
+                        interning at JPL and I'm early in my senior year at MIT for aerospace engineering.
                 </Typography>
-            </div>
+                </div>
             </div>
             <Typography className="subtitle" variant="display1" color="textPrimary">My Interests</Typography>
             <Card className="card">
@@ -46,7 +46,7 @@ export function Home() {
                     image="/assets/solar_eclipse.jpg" />
                 <CardContent className="card-content">
                     <Typography variant="headline" color="textSecondary"> Space Stuff </Typography>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
                         A lifelong passion, I've been building model
                         planes and rockets, and looking through telescopes
@@ -66,11 +66,11 @@ export function Home() {
                     <Typography variant="headline" color="textSecondary">
                         Programming and Linux
                     </Typography>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
                         A newer interest of mine, but that's only to say
                         that it's been a hobby of mine for almost 8 years now.
-                        I got into using Linux back in around 2011-2012 and 
+                        I got into using Linux back in around 2011-2012 and
                         ever since have been dual-booting or single-booting
                         some distro or another.  I've learned more programming
                         languages than I care to mention, but greatest thing
@@ -90,18 +90,16 @@ export function Home() {
                     <Typography variant="headline" color="textSecondary">
                         Running
                     </Typography>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
-                        Going off that theme of freedom, another significant
-                        hobby of mine is backpacking.  The self-reliance and
-                        freedom that comes with the simplicity of you, your
-                        pack, and the land is intoxicating.  In a similar vein,
-                        I love distance running because of the same combination
-                        of oneself and the land.
+                        I started runing in junior high and was hooked.  There have been some
+                        rough years and some dry spells, but running has been one of those things
+                        that I keep coming back to for the freedom and feeling of accomplishment
+                        when I finish a good workout.
                     </Typography>
                 </CardContent>
             </Card>
-           <Card className="card">
+            <Card className="card">
                 <CardMedia
                     className="media"
                     component="img"
@@ -111,7 +109,7 @@ export function Home() {
                     <Typography variant="headline" color="textSecondary">
                         Backpacking
                     </Typography>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
                         Going off that theme of freedom, another significant
                         hobby of mine is backpacking.  The self-reliance and
@@ -126,12 +124,13 @@ export function Home() {
             <Card className="card">
                 <CardContent>
                     <div className="headline">
-                        <Typography 
-                            variant="headline" 
+                        <Typography
+                            variant="headline"
                             color="textSecondary"
                             style={{
                                 flexGrow: 1,
-                                verticalAlign: "middle"}}>
+                                verticalAlign: "middle"
+                            }}>
                             Spacebox
                         </Typography>
                         <IconButton
@@ -139,10 +138,10 @@ export function Home() {
                             variant="contained"
                             href="https://github.com/spacebox-org/spacebox"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github"/>
+                            <Ionicon icon="logo-github" />
                         </IconButton>
                     </div>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
                         Spacebox is a work-in-progress FOSS Dropbox client
                         that aims to be a fully-featured, modern rethink of
@@ -156,12 +155,13 @@ export function Home() {
             <Card className="card">
                 <CardContent>
                     <div className="headline">
-                        <Typography 
-                            variant="headline" 
+                        <Typography
+                            variant="headline"
                             color="textSecondary"
                             style={{
                                 flexGrow: 1,
-                                verticalAlign: "middle"}}>
+                                verticalAlign: "middle"
+                            }}>
                             gTile
                         </Typography>
                         <IconButton
@@ -169,10 +169,10 @@ export function Home() {
                             variant="contained"
                             href="https://github.com/gTile/gTile"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github"/>
+                            <Ionicon icon="logo-github" />
                         </IconButton>
                     </div>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
                         I'm also a maintainer on the gTile GNOME shell
                         extension.  It allows one to tile windows to an
@@ -184,24 +184,25 @@ export function Home() {
             <Card className="card">
                 <CardContent>
                     <div className="headline">
-                        <Typography 
-                            variant="headline" 
+                        <Typography
+                            variant="headline"
                             color="textSecondary"
                             style={{
                                 flexGrow: 1,
-                                verticalAlign: "middle"}}>
+                                verticalAlign: "middle"
+                            }}>
                             Rust rpi_ws281x Bindings
                         </Typography>
                         <IconButton
-                            
+
                             className="link-button"
                             variant="fab"
                             href="https://github.com/rpi-ws281x/rpi-ws281x-rust"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github"/>
+                            <Ionicon icon="logo-github" />
                         </IconButton>
                     </div>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
                         I also maintain the Rust bindings for the rpi_ws281x
                         userspace driver for LEDs on the Raspberry Pi. I
@@ -216,24 +217,25 @@ export function Home() {
             <Card className="card">
                 <CardContent>
                     <div className="headline">
-                        <Typography 
-                            variant="headline" 
+                        <Typography
+                            variant="headline"
                             color="textSecondary"
                             style={{
                                 flexGrow: 1,
-                                verticalAlign: "middle"}}>
+                                verticalAlign: "middle"
+                            }}>
                             Irradiance
                         </Typography>
                         <IconButton
-                            
+
                             className="link-button"
                             variant="fab"
                             href="https://github.com/JMurph2015/Irradiance.jl"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github"/>
+                            <Ionicon icon="logo-github" />
                         </IconButton>
                     </div>
-                    <Divider style={{marginBottom: "0.25rem", marginTop: "0.25rem"}}/>
+                    <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
                         Irradiance is a project I started in May of 2017 to
                         generate LED effects synchronized to music and display
@@ -249,13 +251,13 @@ export function Home() {
 
             <div className="grid-break">
             </div>
-            
-            <Button 
+
+            <Button
                 href="https://github.com/JMurph2015"
                 variant="contained"
                 color="secondary"
                 className="button-content">
-                <Ionicon icon="logo-github"/>
+                <Ionicon icon="logo-github" />
                 GitHub
             </Button>
             <Button
@@ -263,7 +265,7 @@ export function Home() {
                 variant="contained"
                 color="secondary"
                 className="button-content">
-                <Ionicon icon="logo-linkedin"/>
+                <Ionicon icon="logo-linkedin" />
                 Linkedin
             </Button>
             <Button
@@ -271,7 +273,7 @@ export function Home() {
                 variant="contained"
                 color="secondary"
                 className="button-content">
-                <Ionicon icon="logo-twitter"/>
+                <Ionicon icon="logo-twitter" />
                 Twitter
             </Button>
         </div>
