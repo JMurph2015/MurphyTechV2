@@ -1,0 +1,1 @@
+sudo -- sh -c 'docker build -t murphytech . && docker tag murphytech:latest 931583538032.dkr.ecr.us-east-1.amazonaws.com/murphytech:latest && docker push 931583538032.dkr.ecr.us-east-1.amazonaws.com/murphytech:latest'

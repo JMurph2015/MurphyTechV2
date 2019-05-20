@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export function NavBar() {
     return (
-        <AppBar position="sticky" style={{width: "100vw", padding: "0px"}}>
+        <AppBar position="sticky" style={{ width: "100%", padding: "0px" }}>
             <ToolBar>
                 <MenuItem>
                     <Typography variant="headline" color="textPrimary">MurphyTech</Typography>

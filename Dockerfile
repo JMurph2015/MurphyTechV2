@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   libssl-dev \
   libssl1.1 \
   && rm -rf /var/lib/apt/lists/*
-  
+
 
 # Using hacks detailed at https://whitfin.io/speeding-up-rust-docker-builds/
 # to save me from the 5min build times.
@@ -49,10 +49,15 @@ FROM debian:stretch
 RUN apt-get update && apt-get install --no-install-recommends -y \
   libssl-dev \
   libssl1.1 \
+  nginx \
+  supervisor \
   && rm -rf /var/lib/apt/lists/*
 COPY --from=rust_build /usr/src/server/target/debug/murphytech_server /usr/src
 COPY --from=node_build /usr/src/client/build /usr/src/static
-COPY ./assets /usr/src/assets
+COPY ./assets /usr/src/static/assets
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./supervisord.conf /etc/supervisord.conf
+EXPOSE 80
 
 # TODO: need to transfer the compiled client files over to the
 # built container as well.
@@ -60,4 +65,4 @@ COPY ./assets /usr/src/assets
 # Run the server
 ENV RUST_BACKTRACE=1
 WORKDIR /usr/src
-CMD ["./murphytech_server"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
