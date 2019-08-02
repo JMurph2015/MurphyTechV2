@@ -4,13 +4,13 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.0.2",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
-    "react-ionicons": "^2.1.6",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
-    "redux": "^4.0.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-ionicons": "^3.0.1",
+    "react-redux": "^7.0",
+    "react-router-dom": "^5.0",
+    "react-scripts": "^3.0",
+    "redux": "^4.0",
     "typeface-lato": "0.0.54",
     "typeface-roboto": "0.0.54"
   },
@@ -19,5 +19,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
