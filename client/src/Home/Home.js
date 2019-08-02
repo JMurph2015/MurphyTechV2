@@ -5,7 +5,10 @@ import { Typography, Button, IconButton, Divider } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Ionicon from 'react-ionicons';
+import LogoGithub  from 'react-ionicons/lib/LogoGithub';
+import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin';
+import LogoTwitter from 'react-ionicons/lib/LogoTwitter';
+
 
 export function Home() {
 
@@ -138,7 +141,7 @@ export function Home() {
                             variant="contained"
                             href="https://github.com/spacebox-org/spacebox"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github" />
+                            <LogoGithub/>
                         </IconButton>
                     </div>
                     <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
@@ -169,7 +172,7 @@ export function Home() {
                             variant="contained"
                             href="https://github.com/gTile/gTile"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github" />
+                            <LogoGithub/>
                         </IconButton>
                     </div>
                     <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
@@ -199,7 +202,7 @@ export function Home() {
                             variant="fab"
                             href="https://github.com/rpi-ws281x/rpi-ws281x-rust"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github" />
+                            <LogoGithub/>
                         </IconButton>
                     </div>
                     <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
@@ -232,7 +235,7 @@ export function Home() {
                             variant="fab"
                             href="https://github.com/JMurph2015/Irradiance.jl"
                             aria-label="GitHub">
-                            <Ionicon icon="logo-github" />
+                            <LogoGithub/>
                         </IconButton>
                     </div>
                     <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
@@ -257,7 +260,7 @@ export function Home() {
                 variant="contained"
                 color="secondary"
                 className="button-content">
-                <Ionicon icon="logo-github" />
+                <LogoGithub/>
                 GitHub
             </Button>
             <Button
@@ -265,7 +268,7 @@ export function Home() {
                 variant="contained"
                 color="secondary"
                 className="button-content">
-                <Ionicon icon="logo-linkedin" />
+                <LogoLinkedin/>
                 Linkedin
             </Button>
             <Button
@@ -273,7 +276,7 @@ export function Home() {
                 variant="contained"
                 color="secondary"
                 className="button-content">
-                <Ionicon icon="logo-twitter" />
+                <LogoTwitter/>
                 Twitter
             </Button>
         </div>
