@@ -29,15 +29,12 @@ export function Home() {
                         image="/assets/me_in_portland_full.jpg" />
                     <Typography variant="body1"
                         className="bio">
-                        Welcome to my website!  I'm Joseph Murphy, an engineering student at MIT.
-                        I hail from the great state of Arkansas and a small town called Bentonville.
-                        The last of five, my family is quite large and boisterous, so don't worry about
-                        interrupting me if I ramble, it's the only way I get a word in edgewise at home.
-                        Don't let my Midsouth/Midwest background fool you, I've been to all 48 states of
-                        the contiguous United States as well as Canada, Ireland, Italy, Belgium, and Spain;
-                        I've seen a decent bit.  As for what I do these days, I spent the last two summers
-                        interning at JPL and I'm early in my senior year at MIT for aerospace engineering.
-                </Typography>
+                        Welcome to my website!  I'm a software developer for Google on Android
+                        platform infrastructure.  I'm currently based in the San Francisco Bay
+                        Area.  I graduated  MIT for aerospace engineering in 2019, and prior
+                        to that grew up in Bentonville, Arkansas.  A fun factiod about me is
+                        that I've visited all of the lower 48 continental states of the USA.
+                    </Typography>
                 </div>
             </div>
             <Typography className="subtitle" variant="display1" color="textPrimary">My Interests</Typography>
@@ -63,23 +60,18 @@ export function Home() {
                 <CardMedia
                     className="media"
                     component="img"
-                    title="A Rust Snippet"
-                    image="/assets/snippet-1-crop.png" />
+                    title="An Adafruit Metro Mini"
+                    image="/assets/metro-mini.jpg" />
                 <CardContent className="card-content">
                     <Typography variant="headline" color="textSecondary">
-                        Programming and Linux
+                        Systems Programming
                     </Typography>
                     <Divider style={{ marginBottom: "0.25rem", marginTop: "0.25rem" }} />
                     <Typography variant="body1">
-                        A newer interest of mine, but that's only to say
-                        that it's been a hobby of mine for almost 8 years now.
-                        I got into using Linux back in around 2011-2012 and
-                        ever since have been dual-booting or single-booting
-                        some distro or another.  I've learned more programming
-                        languages than I care to mention, but greatest thing
-                        about being a developer is the freedom.  No longer
-                        does one have to wait for someone with arcane knowledge
-                        to fix your problems for you.
+                        I have several pet projects that use a variety of embedded controllers.
+                        Some of the notable ones are the ATmega328, the STM32F427 Cortex-M4F, and
+                        some more niche (and sensitive) architectures.  In the future, I want to
+                        play more with RISC-V microcontrollers.
                     </Typography>
                 </CardContent>
             </Card>
