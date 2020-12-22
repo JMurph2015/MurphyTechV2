@@ -22,6 +22,10 @@ WORKDIR /usr/src/server
 # Copy over the Cargo.toml, Cargo.lock, utilities, and mocks
 COPY ./server/Cargo.lock ./Cargo.lock
 COPY ./server/Cargo.toml ./Cargo.toml
+COPY ./server/mocks ./src
+
+# Build the empty project to compile and cache dependencies
+RUN cargo build && rm src/*.rs
 
 # Copy in the build script and the real src directory
 COPY ./server/src ./src/
@@ -49,7 +53,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   nginx \
   supervisor \
   && rm -rf /var/lib/apt/lists/*
-COPY --from=rust_build /usr/src/server/target/release/murphytech_server /usr/src
+COPY --from=rust_build /usr/src/server/target/debug/murphytech_server /usr/src
 COPY --from=node_build /usr/src/client/build /usr/src/static
 COPY ./assets /usr/src/static/assets
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf

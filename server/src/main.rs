@@ -13,23 +13,23 @@ extern crate serde_json;
 #[macro_use]
 extern crate serde_derive;
 
-
 use diesel::prelude::*;
-use diesel::pg::PgConnection;
 use dotenv::dotenv;
-use std::env;
+use rocket::{
+    response::{status::NotFound, NamedFile},
+};
+use rocket_contrib::json::Json;
+use rocket_contrib::serve::StaticFiles;
 
 pub mod models;
 pub mod schema;
+pub mod routes;
+pub mod auth;
 
+use models::*;
+use schema::*;
 
-use rocket::{
-    config::{Config, Environment, LoggingLevel},
-    response::{status::NotFound, NamedFile},
-};
-use rocket_contrib::serve::StaticFiles;
-
-#[database("murphydev-test")]
+#[database("main")]
 pub struct DbConn(diesel::PgConnection);
 
 #[get("/")]
@@ -38,23 +38,29 @@ fn index() -> Result<NamedFile, NotFound<String>> {
 }
 
 #[get("/users")]
-pub fn get_users(conn: DbConn) -> Result<String> {
-    return posts::table.limit(5).load::<Post>(&conn.0).map_err(|err| -> format!("Error querying
-    users: {:?}", err))
+pub fn get_users(conn: DbConn) -> Result<Json<Vec<User>>, String> {
+    return match users::table
+        .limit(5)
+        .load::<User>(&conn.0)
+        .map_err(|err| -> String { return format!("Error querying users: {:?}", err) })
+    {
+        Ok(u) => Ok(Json(u)),
+        Err(x) => Err(x),
+    };
 }
+
 
 fn main() {
     dotenv().ok();
 
-    let config = Config::build(Environment::Staging)
-        .log_level(LoggingLevel::Normal)
-        .address("0.0.0.0")
-        .port(8081)
-        .finalize()
-        .expect("Failed to build config");
+    println!("Hello Rocket!");
 
-    rocket::custom(config)
+    rocket::ignite()
         .mount("/", routes![index])
+        .mount(
+            "/api",
+            routes::messages::get_message_routes()
+        )
         .mount("/index.html", StaticFiles::from("./static/index.html"))
         .mount("/favicon.ico", StaticFiles::from("./static/favicon.ico"))
         .mount("/static", StaticFiles::from("./static/static"))
