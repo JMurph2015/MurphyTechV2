@@ -1,5 +1,5 @@
 use diesel::prelude::*;
-use diesel::query_builder::QueryFragment;
+
 use rocket::{http::Status, Route};
 use rocket_contrib::json::Json;
 
@@ -8,7 +8,7 @@ use super::super::schema::*;
 use super::super::DbConn;
 use crate::auth::{AuthPackage, AuthScope};
 
-use diesel::pg::Pg;
+
 
 pub fn get_message_routes() -> Vec<Route> {
     //routes![create_message]
