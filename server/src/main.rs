@@ -15,16 +15,14 @@ extern crate serde_derive;
 
 use diesel::prelude::*;
 use dotenv::dotenv;
-use rocket::{
-    response::{status::NotFound, NamedFile},
-};
+use rocket::response::{status::NotFound, NamedFile};
 use rocket_contrib::json::Json;
 use rocket_contrib::serve::StaticFiles;
 
-pub mod models;
-pub mod schema;
-pub mod routes;
 pub mod auth;
+pub mod models;
+pub mod routes;
+pub mod schema;
 
 use models::*;
 use schema::*;
@@ -49,7 +47,6 @@ pub fn get_users(conn: DbConn) -> Result<Json<Vec<User>>, String> {
     };
 }
 
-
 fn main() {
     dotenv().ok();
 
@@ -57,10 +54,7 @@ fn main() {
 
     rocket::ignite()
         .mount("/", routes![index])
-        .mount(
-            "/api",
-            routes::messages::get_message_routes()
-        )
+        .mount("/api", routes::messages::get_message_routes())
         .mount("/index.html", StaticFiles::from("./static/index.html"))
         .mount("/favicon.ico", StaticFiles::from("./static/favicon.ico"))
         .mount("/static", StaticFiles::from("./static/static"))

@@ -18,7 +18,7 @@ pub struct Message {
 }
 
 #[derive(Insertable, Serialize, Deserialize)]
-#[table_name="messages"]
+#[table_name = "messages"]
 pub struct NewMessage {
     pub body: String,
 }
