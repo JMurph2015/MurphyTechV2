@@ -9,7 +9,7 @@
     "react-ionicons": "^3.0.1",
     "react-redux": "^7.0",
     "react-router-dom": "^5.0",
-    "react-scripts": "^3.0",
+    "react-scripts": "^5.0",
     "redux": "^4.0",
     "typeface-lato": "0.0.54",
     "typeface-roboto": "0.0.54"
